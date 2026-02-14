@@ -1,4 +1,8 @@
-html, body {
+html {
+    width: 100%;
+}
+
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -125,7 +129,7 @@ body {
 .hero-slider {
     position: relative;
     height: 90vh;
-    overflow: hidden;
+    height: 90dvh;
 }
 
 .hero-slider::after {
@@ -225,7 +229,6 @@ body {
     position: relative;
     padding: 100px 0;
     background: linear-gradient(135deg, #ffffff 60%, #f0f0f0 60%);
-    overflow: hidden;
 }
 
 .advantages::before {
@@ -293,11 +296,13 @@ body {
 }
 
 .sponsor-grid img {
-    max-width: 200px;
-    margin: auto;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto;
     filter: grayscale(100%);
     opacity: 0.6;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .sponsor-grid img:hover {
@@ -392,6 +397,31 @@ html {
     line-height: 1.8;
 }
 
+@media (max-width: 1024px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-grid img {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-grid img {
+        max-width: 120px;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -420,5 +450,11 @@ html {
 
     .slide h1 {
         font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 100dvh;
     }
 }
