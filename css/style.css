@@ -1,3 +1,8 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 :root {
     --red: #e10600;
     --gold: #d4af37;
@@ -409,7 +414,7 @@ html {
         display: flex;
     }
 
-    .btn-primary {
+    .header-btn {
         display: none;
     }
 
